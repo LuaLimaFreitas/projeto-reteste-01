@@ -1,0 +1,108 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto 0 auto;
+}
+
+main:after{
+content: '';
+min-height: 100vh;
+width: 100vw;
+position: fixed;
+top: 0;
+left: 0;
+background-color: linear-gradient(90deg, rgba(238,174,174,0.006127450980392135) 0%, rgba(148,187,233,1) 100%);
+z-index: -1;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-evenly;
+}
+
+
+.informacoes{
+    background-color: white;
+}
+
+.informacoes .logo{
+    max-width: 350px;
+    filter: invert(1);
+    margin: 80px;
+}
+    
+.informacoes .descricao{
+    width: 49%;
+    font-size: 24px;
+    color: grey;
+    line-height: 30px;  
+}
+
+.botoes-carrossel{
+    display: flex;
+    justify-content: center;
+    gap: 25px;   
+}
+
+.botoes-carrossel .botao{
+    background-color:aliceblue;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: burlywood;
+}
+
+.botoes-carrossel .botao.selecionado{
+    background-color: green;
+}
+
+.menu-lateral{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu-lateral ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.carrossel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.carrossel .imagem{
+    width: 100%;
+    height: 100vh;
+   object-fit: cover;
+   display: none;
+   animation: mudarImagem 0.7s ;
+}
+
+.carrossel .imagem.ativa{
+   display: block; 
+}
+
+@keyframes mudarImagem{
+    from{
+        opacity: 0.85;
+    }
+    to{
+        opacity: 1;
+    }
+}
